@@ -58,3 +58,20 @@ canvas.react-pdf__Page__canvas{
   align-items: center; */
   /* padding-left: 150px; */
 }
+
+/* Add this to your CSS file */
+.highlighted-span {
+  position: relative;
+}
+
+.highlighted-span::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 0, 0.2); /* Yellow highlight with low opacity */
+  pointer-events: none; /* Ensures text selection works as expected */
+}
